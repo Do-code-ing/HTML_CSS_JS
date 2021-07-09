@@ -1,0 +1,10 @@
+https://opentutorials.org/course/1688/9410
+
+7. 서버 제어: Apache, PHP, MySQL 제어
+    C:\Bitnami\wampstack-8.0.8-0
+    위 폴더에서, manager-windows.exe 실행
+    Manage Servers 탭에 들어가보면
+    현재 가동중인 서버가 뜨고,
+    Configure 버튼을 눌러서, 
+    각 서버에 에러가 있는지,
+    동작 과정을 바꾼다던지 할 수 있다.
