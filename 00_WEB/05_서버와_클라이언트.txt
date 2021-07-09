@@ -1,0 +1,26 @@
+https://opentutorials.org/course/1688/9408
+
+5. 서버와 클라이언트
+    서버: 웹 서버가 설치되어 있는 컴퓨터
+    클라이언트: 웹 브라우저가 설치되어 있는 컴퓨터
+
+    웹 브라우저(클라이언트)에 주소를 입력하면, 웹 서버(서버)에 요청이 들어가고,
+    웹 서버에서는 웹 페이지 문서로 응답을 한다.
+
+    우리가 사용하는 앱이나 웹은 위와 같은 클라이언트와 서버의 동작 과정으로 사용하게 된다.
+
+    웹 서버 종류
+    Apache (우리 수업에 쓸 거)
+    Nginx
+    IIS (마이크로소프트 제품)
+
+    Apache
+    http://projects.apache.org/projects/http_server.html
+    여기서 설치하면 어렵다.
+    서버의 경우, 전문가가 사용할 것을 염두에 두고 만들어졌기 때문에
+    초심자가 설치를 하려면 한 달, 그 이상이 걸려도 설치를 못할 수도 있다.
+
+    bitnami에서 한번에 설치 가능
+    Window: https://bitnami.com/stack/wamp (Window Apache MySQL PHP)
+    MAC: https://bitnami.com/stack/mamp
+    Linux: https://bitnami.com/stack/lamp
