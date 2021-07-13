@@ -1,16 +1,85 @@
 https://opentutorials.org/course/1688/9340
 
-9. HTML 이론: 기본 문법
-    HyperText
-    Markup
-    Language
+9. HTML 이론: 
+    1. 기본 문법
+        HyperText
+        Markup
+        Language
 
-    Hypertext: 문서와 문서가 '링크'로 연결되어 있다.
-    링크는 HTML의 본질,
-    HTML의 본질(링크)는 웹의 본질
+        Hypertext: 문서와 문서가 '링크'로 연결되어 있다.
+        링크는 HTML의 본질,
+        HTML의 본질(링크)는 웹의 본질
 
-    Markup Language: 사람도 알아듣고, 웹 브라우저도 알아들을 수 있는 언어
+        Markup Language: 사람도 알아듣고, 웹 브라우저도 알아들을 수 있는 언어
+        
+        TAG: 어떤 물건의 자세한 정보
+        안녕하세요. <strong>생활코딩</strong>입니다.
+                시작 태그 컨텐츠 끝 태그
     
-    TAG: 어떤 물건의 자세한 정보
-    안녕하세요. <strong>생활코딩</strong>입니다.
-               시작 태그 컨텐츠 끝 태그
+    2. 속성
+        a: link를 나타내는 태그
+        <a>생활코딩</a>
+    
+        속성: 문법적 요소
+        <a href="http://opentutorials.org/course/1">생활코딩</a>
+        href: 속성명 (링크 주소를 쓸 때 쓰는 속성명)
+        그 뒤: 속성값
+
+        새 탭에서 여는 법:
+        <a href="http://opentutorials.org/course/1" target="_blank">생활코딩</a>
+        target: 속성명
+        _blank: 새 창에서 열겠다.
+        _self: 현재 창에서 열겠다. (기본값)
+        속성과 속성 사이를 공백문자로 구분하여 사용할 수 있다.
+    
+    3. 태크의 중첩
+        list 태그:
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        
+        ul 태그: unordered list: 순서가 없는 리스트
+        ol 태그: ordered list: 순서가 있는 리스트
+
+        <ol>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        </ol>
+
+        <ul>
+        <li>최진혁</li>
+        <li>최유빈</li>
+        <li>한이람</li>
+        </ul>
+
+        태그로 컨텐츠만을 감싸는게 아니라,
+        태그로 태그를 감싸는 것도 가능하다.
+
+        body 태그:
+        웹 페이지의 본문(문서의) 내용을 담는 태그
+
+        head 태그:
+        웹 페이지의 문서의 정보를 담는 태그
+        <meta charset="utf-8" />
+        <title>생활코딩</title>
+
+        html 태그:
+        html 문서라고 브라우저에게 알려주는 태그
+    
+    4. 그 외의 이야기들:
+        팀 버너스리: html을 처음 만든 사람
+        w3c: world wide web consortium: html을 체계적으로 발전시키기 위한 국제 기구
+        (태그의 존폐여부 등을 관장함)
+        w3c의 의장이 팀 버너스리
+        Google, Apple, MS, Samsung 등이 이 기구의 멤버
+
+        <!DOCTYPE html>:
+        어떤 html 표준에 따라서 작성된 것인지 명시
+        (각 html 표준안에 따라서 태그의 사용법같은 것들이 바뀐다.)
+
+        Tag Reference:
+        http://dev.w3.org/html5/html-author/ - 영문
+        http://opentutorials.org/course/1058 - 한글
+    
+    html의 본질 = 정보
