@@ -1,0 +1,65 @@
+https://opentutorials.org/course/1688/9345
+
+10. HTML 실습
+    1. 모델링을 HTML로 만들기
+        기획한 것을 HTML로
+        대제목(주제): h1 (h2, h3... 갈수록 글씨가 작아짐)
+        <h1>Javascript</h1>
+
+        <ol>
+            <li>Javascript란?</li>
+            <li>변수와 상수</li>
+            <li>연산자</li>
+        </ol>
+
+        소제목: h2
+        <h2>변수와 상수</h2>
+
+        내용:
+        변수란
+        <ul>
+            <li>변하는 값</li>
+            <li>x=10일 때 왼쪽항 ... </li>
+        </ul>
+
+        코드화(마크화) 작업 끝
+    
+    2. 의미론적인 웹
+        Semantic Web: 의미가 잘 드러나는 웹
+        Semantic tag: 의미가 잘 드러나게 하는 태그
+
+        XHTML -> HTML5
+
+        nav 태그: navigation
+        <nav></nav>
+        웹 사이트를 탐색하는 정보를 분명하게 표시해서 기계들도 잘 이해할 수 있도록 하는 태그
+        태그안의 컨텐츠가 네비게이션이라는 의미를 가지게한다. (의미론적)
+
+        header 태그: 간판
+        <header></header>
+
+        article 태그: 본문
+        <article></article>
+
+        이 태크들은 똑같은 말을 더 유창하게, 잘하는 것과 같다.
+
+    3. 사이트의 완성
+        index.html: 어떤 사이트의 대문
+        각 항목별로 링크를 걸어 서로 이동할 수 있게 만든다.
+
+        수정 사항이 생기면,
+        사이트의 공통 부분들은 하나 하나 수정해야 한다.
+    
+    4. 쉬어가기
+        웹의 사용량이 많아진만큼,
+        강력해진만큼 복잡해졌다.
+        복잡한만큼 천천히 하자.
+
+        웹 브라우저: Client Side Tech
+        - HTML
+        - CSS
+        - JavaScript
+
+        웹 서버: Server Side Tech
+        - PHP
+        - MySQL

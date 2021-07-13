@@ -67,7 +67,7 @@ https://opentutorials.org/course/1688/9340
         html 태그:
         html 문서라고 브라우저에게 알려주는 태그
     
-    4. 그 외의 이야기들:
+    4. 그 외의 이야기들
         팀 버너스리: html을 처음 만든 사람
         w3c: world wide web consortium: html을 체계적으로 발전시키기 위한 국제 기구
         (태그의 존폐여부 등을 관장함)
