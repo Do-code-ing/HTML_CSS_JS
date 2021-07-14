@@ -1,0 +1,159 @@
+https://opentutorials.org/course/1688/9350
+
+12. CSS 이론
+    1. 기본문법
+        CSS: 디자인을 위한 언어
+        Cascading Style Sheet
+        
+        HTML을 디자인하기 위해 고안된 언어
+        HTML이 정보에 집중하게 하기 위해서,
+        여러 디자인을 담당하던 태그들을 퇴출시키고 CSS로 편입
+
+        head 태그안에,
+        <style></style> 태그를 사용하여,
+        css 문법으로 읽어야 함을 컴퓨터에게 알려준다.
+
+        <head>
+            <style>
+                h1 {color:red}
+            </style>
+        </head>
+
+        h1: 선택자(selector)
+        {color:red}: 서술(description)
+    
+    2. 선택자 심화
+        h1 {color:red; font-size:10px;}
+
+        color, font-size: 속성
+        속성을 나누는 기호 세미 콜론(;)
+        웹 브라우저는 줄 바꿈이나 공백을 무시하므로,
+        가급적이면 가독성이 높은 코드를 작성할 것
+
+        <style>
+            h1 {
+                color:red;
+                font-size:10px
+            }
+        </style>
+
+        h2에게도 같이 적용하려면,
+
+        <style>
+            h1, h2 {
+                color:red;
+                font-size:10px
+            }
+        </style>
+
+        h2에게만 밑줄을 적용하고 싶다면,
+        선택자를 새로 써서 하면 된다.
+
+        <style>
+            h1, h2 {
+                color:red;
+                font-size:10px
+            }
+            h2 {
+                text-decoration:underline;
+            }
+        </style>
+        
+        특정 태그안의 태그만 변경하려면,
+        예를 들어, 다음과 같이 header 태그로 묶고,
+
+        <header>
+            <h1>CSS</h1>
+        </header>
+
+        다음과 같이 작성하면 된다.
+
+        <style>
+            header h1 {
+                border:1px solid red
+            }
+        </style>
+
+        border: 테두리
+    
+    3. 박스모델
+        css를 이용해서 html 태그들의 위치, 부피, 여백 등을 지정하는 것
+
+        <style>
+            li {
+                border:1px red solid;
+            }
+        </style>
+
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+
+        위와 같다면, 모든 li 태그의 컨텐츠들이 1픽셀 크기의 빨간 점선으로 감싸지는데,
+        [특정 컨텐츠만 바꾸고 싶다면 어떻게 해야 할까?]
+
+        <style>
+            #selected {
+                border:1px red solid;
+            }
+        </style>
+
+        <li>html</li>
+        <li id="selected">css</li>
+        <li>javascript</li>
+
+        위와 같이 id를 정의해서 할 수 있다.
+        선택자를 쓸 때는 #을 붙여서 쓰면 된다.
+        id와 #은 약속된 것이므로 아무거나 쓰면 안된다.
+
+        [만약 테두리와 글씨 사이의 간격을 더 넓게 하고 싶다면 어떻게 해야 할까?]
+
+        <style>
+            #selected {
+                border: 1px red solid;
+                padding: 30px
+            }
+        </style>
+
+        padding을 사용하여 늘릴 수 있다.
+
+        [만약 css와 javascript 사이의 간격을 넓게 하려면 어떻게 해야 할까?]
+
+        <style>
+            #selected {
+                border: 1px red solid;
+                padding: 30px;
+                margin: 50px;
+            }
+            #extra {
+                border: 1px blue solid;
+            }
+        </style>
+
+        margin을 사용하여 간격을 조정할 수 있다.
+        
+        [정리]
+        content를 감싸는 border가 있고,
+        content와 border 사이의 간격을 padding이라고 하고,
+        content의 border와 다른 border 사이의 간격을 margin이라고 하고,
+        content의 세로 길이를 height, 가로 길이를 width라고 한다.
+
+        브라우저에서 ctrl + shift + i를 누르면,
+        개발자 모드 - 검사를 불러오는데,
+        직접 수치에 변화를 주며, 시각적으로 아름다움을 확인해 볼 수 있다.
+        변화된 수치는 실제 코드에 영향을 주지 않는다.
+    
+    4. float
+        웹 페이지의 레이아웃을 디자인할 때 사용되는 속성
+
+        img 태그:
+        <img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/course/94.png" />
+
+        img와 글씨가 이쁘게 자리잡게 하는게 float 속성
+        
+        <style>
+            img {
+                border: 1px red solid;
+                float: left; (or right;)
+            }
+        </style>
