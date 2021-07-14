@@ -1,0 +1,16 @@
+https://opentutorials.org/course/1688/9346
+
+11. 개발도구
+    1. 도구의 필요성
+        버전 관리 시스템(Version Control System):
+        코드의 변화를 기록하는 시스템
+        여러 사람들이 협업하는 과정에서 질서를 잡아준다.
+
+        SVN, Mecurial, GIT
+        GIT 수업: http://opentutorials.org/course/1492
+
+        코드 편집기: Editor
+        atom (from GitHub)
+        atom을 필수로 사용해야하는 것은 아니다.
+        메모장을 사용해도 상관없다.
+        나는 vscode를 쓸거얌
