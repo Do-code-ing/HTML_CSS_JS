@@ -1,0 +1,10 @@
+https://opentutorials.org/course/1688/9363
+
+14. 프로그래밍 (JS, PHP 이론)
+    [중간 정리]
+    웹의 기술:
+        1. HTML: 정보
+        2. CSS: 디자인
+        3. JavaScript: 상호작용
+        4. PHP: 생산성 증가
+        5. MySQL: 데이터 베이스 (보안, 데이터 관리)
