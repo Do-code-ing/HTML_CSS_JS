@@ -47,3 +47,8 @@ https://opentutorials.org/course/1688/9351
 
         HTML = 정보
         CSS = design, style
+    
+    3. CSS 활용 (stylebot)
+        google web store: stylebot
+        https://chrome.google.com/webstore/detail/stylebot/oiaejidbmkiecgbjeifoejpgmdaleoha
+        광고 제거와 같은 작업이 가능
