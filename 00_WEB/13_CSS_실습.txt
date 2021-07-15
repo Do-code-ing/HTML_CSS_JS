@@ -1,0 +1,49 @@
+https://opentutorials.org/course/1688/9351
+
+13. CSS 실습
+    1. Design HTML
+        CSS의 역할: Design HTML
+        page_vc.html
+        <style>
+            header {
+                border-bottom: 1px gray solid;
+                padding: 20px
+            }
+            nav {
+                border-right: 1px gray solid;
+                width: 200px;
+                height: 600px;
+                float: left;
+            }
+            nav ol {
+                list-style: none;
+            }
+            article {
+                float: left;
+                padding: 20px;
+            }
+        </style>
+
+    2. 완성
+        다른 페이지들도 같게 만들기: 복붙
+        하다 보면 귀찮고,
+        page 수가 많아지면, 수정사항이 많아지면 어지러울 것이다..
+        CSS를 HTML로부터 분리하자.
+
+        style.css 파일을 만들고,
+        그 파일에 기존 style 태그안에 있던 내용을 입력하고 저장한다.
+        다음으로 html 파일에, head 태그 아래에,
+        <link rel="stylesheet" type:"text/css" href="http://localhost/style.css">
+        와 같이 입력하면,
+        style.css 파일에 입력된 css 문법대로 style 태그가 적용된다.
+
+        이렇게 하면 앞으로 복붙을 일일히 할 필요없이,
+        한 번에 바꿀 수 있다!
+
+        '중복의 제거'
+        유지 보수가 쉬워진다.
+        용량의 부담이 줄어든다.
+        시간도 덜 걸린다.
+
+        HTML = 정보
+        CSS = design, style
