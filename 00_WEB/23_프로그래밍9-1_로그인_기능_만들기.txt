@@ -1,0 +1,19 @@
+https://opentutorials.org/course/1688/9372
+
+23. 프로그래밍 9-1: JavaScript 로그인 앱
+    로그인 기능 구현
+    <script>
+        prompt("비밀번호")
+    </script>
+    : 프롬프트 창 띄우기 (Python의 input인듯?)
+    HTML은 못함.
+
+    <script>
+        password = prompt("비밀번호");
+        if (password == 1111) {
+            document.write("안녕하세요. 주인님")
+        } else {
+            document.write("뉘신지?")
+        }
+    </script>
+    조건문을 사용해서 결과 출력
