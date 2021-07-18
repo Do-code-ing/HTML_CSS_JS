@@ -1,0 +1,20 @@
+https://opentutorials.org/course/1688/9365
+
+설정:
+    Open 'C:\Bitnami\wampstack-8.0.8-0\php\php.ini'
+    find 'display_errors=Off', Off to On # 에러 보이기
+    find '[opcache]', 'opcache.enable=1', 1 to 0 # 수정 내용 바로 업데이트
+    실제 웹 서버 오픈 시, 기존 값으로 하는게 보안, 시간적으로 좋음
+    설정 후 bitnami에서 서버 restart
+
+16. 프로그래밍 2: JavaScript vs PHP
+    둘 다 프로그래밍 언어이며 비슷하다.
+    HTML, CSS = (문서를 만들기 위한) 정적 언어
+    JavaScript, PHP = (프로그램을 동작하게 하기 위한) 동적 언어
+
+    JavaScript:
+        버튼과 같이, 웹 브라우저에게 어떠한 명령을 내릴 수 있는 언어
+    PHP:
+        css와 html을 분리시킨 것 처럼,
+        정보와 html을 분리시킬 수 있다.
+        즉, 하나의 php파일로 여러개의 웹 페이지를 만들 수 있다.
