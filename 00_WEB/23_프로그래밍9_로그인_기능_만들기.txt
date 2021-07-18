@@ -1,0 +1,53 @@
+https://opentutorials.org/course/1688/9372
+
+23. 프로그래밍 9: 로그인 기능 만들기
+    9-1: JavaScript 로그인 앱
+        로그인 기능 구현
+        <script>
+            prompt("비밀번호")
+        </script>
+        : 프롬프트 창 띄우기 (Python의 input인듯?)
+        HTML은 못함.
+
+        <script>
+            password = prompt("비밀번호");
+            if (password == 1111) {
+                document.write("안녕하세요. 주인님")
+            } else {
+                document.write("뉘신지?")
+            }
+        </script>
+        조건문을 사용해서 결과 출력
+    
+    9-2: PHP 로그인 앱
+        9-2-1:
+        9-2-2:
+            <body>
+                <form action="8-2.php">
+                    <p>비밀번호를 입력해주세요.</p>
+                    <input type="text" name="password">
+                    <input type="submit">
+                </form>
+                ...
+            </body>
+
+            submit: 버튼의 역할.
+                    (버튼을 누르면) form action 뒤의 페이지를 열면서,
+                    8-2.php뒤에 ?를 붙히고, 인풋데이터의 속성 이름과 값을 넣어
+                    즉, 8-2.php?password=1111과 같은 페이지를 연다.
+            
+            8-2.php:
+                <?php
+                    echo $_GET["password"]
+                ?>
+                $_GET[x]: 사용자의 입력값 중 x 받아오기
+            
+                <?php
+                    $password = $_GET["password"];
+                    if ($password == 1111) {
+                        echo "주인님 환영합니다.";
+                    } else {
+                        echo "뉘신지?";
+                    }
+                ?>
+                다음과 같이 받아와서 페이지를 동적으로 만들 수 있다.
