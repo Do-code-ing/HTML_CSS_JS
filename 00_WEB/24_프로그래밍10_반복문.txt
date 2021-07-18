@@ -1,0 +1,52 @@
+https://opentutorials.org/course/1688/9374
+
+24. 프로그래밍 10: 반복문
+    JavaScript:
+    while (true/false) {
+    
+    }
+
+    PHP:
+    while (true/false) {
+
+    }
+
+    <script>
+        i = 0;
+        while (i < 10){
+            document.write("hello world<br />");
+            i += 1
+        }
+    </script>
+    <br />: 줄 바꿈 태그 (Python의 /n인듯)
+
+    <?php
+        $i = 0;
+        while ($i < 10) {
+            echo "hello world<br />";
+            $i = $i + 1;
+        }
+    ?>
+
+    [리스트 형태로 표현하기]
+    <h1>JavaScript</h1>
+    <ul>
+    <script>
+        i = 0;
+        while (i < 10){
+            document.write("<li>hello world</li>");
+            i += 1;
+        }
+    </script>
+    </ul>
+
+    <h2>php</h2>
+    <ul>
+    <?php
+        $i = 0;
+        while ($i < 10) {
+            echo "<li>hello world</li>";
+            $i = $i + 1;
+        }
+    ?>
+    </ul>
