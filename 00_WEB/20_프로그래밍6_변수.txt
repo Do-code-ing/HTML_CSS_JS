@@ -1,0 +1,8 @@
+https://opentutorials.org/course/1688/9369
+
+20. 프로그래밍 6: 변수
+    JavaScript:
+    name = "이고잉"
+
+    PHP: 달러를 붙혀야 변수 (선언, 사용시 항상)
+    $name = "이고잉"
