@@ -1,0 +1,12 @@
+https://opentutorials.org/course/1688/9370
+
+21. 프로그래밍 7: 비교
+    대소관계 및 같음과 다름을 판별
+        JS  PHP
+        ==  ==
+        !=  !=
+        >   >
+        <   <
+    
+    JS: document.write(1==1);
+    PHP: var_dump(1==1);
