@@ -1,0 +1,11 @@
+https://opentutorials.org/course/1688/9368
+
+19. 프로그래밍 5: 디버깅
+    버그: 프로그램의 오동작
+    디버그: 버그 잡기
+
+    브라우저에서 ctrl + shift + j = 스크립트 콘솔
+    에러 확인 후 처리
+
+    C:\Bitnami\wampstack-8.0.8-0\apache2\logs\error.log 열고
+    맨 아래로 가서 에러 확인 후 처리
