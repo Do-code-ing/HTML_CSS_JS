@@ -1,0 +1,41 @@
+https://opentutorials.org/course/1688/9366
+
+17. 프로그래밍 3: 웹 페이지에 코드 삽입하기
+    Programming: 기본 문법
+    1. 삽입:
+        [PHP]: HTML과 똑같이 작동한다.
+            <?php
+                echo "Hello world";
+            ?>
+
+            <?php 'content' ?>: php 엔진(인터프리터) 작동
+            echo: 삽입
+        
+            <?php
+                echo 10+10;
+            ?>
+            결과: 20
+
+        [JavaScript]:
+            <script>
+                document.write(10+10);
+            </script>
+
+        [차이점]: 소스 보기
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="utf-8" />
+            </head>
+            <body>
+                <h1>php</h1>
+                20    <h1>JavaScript</h1>
+                <script>
+                    document.write(10+10);
+                </script>
+            </body>
+            </html>
+        
+        php는, php인터프리터가 작업한 뒤 서버에게 주고,
+        서버가 다시 브라우저에게 주므로 20으로 찍혀나오고, (서버에서 처리)
+        js는 웹 브라우저가 처리하는 언어라서 소스 그대로 나온다. (클라이언트에서 처리)
