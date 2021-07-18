@@ -1,0 +1,14 @@
+https://opentutorials.org/course/1688/9364
+
+15. 프로그래밍 1: 복습과 예습
+    Programming: PHP & JavaScript
+    
+                http://a.com./a.html
+    웹 브라우저 ------- 요청 -------> 웹 서버
+    웹 브라우저 <------ 응답 -------- 웹 서버
+
+                http://a.com.a.php            topic: something     topic table
+    웹 브라우저 ------- 요청 -------> 웹 서버 -------> PHP -------> 데이터 베이스
+
+    웹 브라우저 <------ 응답 -------- 웹 서버 <------- PHP <------ 데이터 베이스
+                        html                완성된 html     data
