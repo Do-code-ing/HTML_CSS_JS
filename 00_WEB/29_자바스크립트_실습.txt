@@ -1,0 +1,149 @@
+https://opentutorials.org/course/1688/9381
+
+29. 자바스크립트 실습
+    [실습 1]
+        버튼 만들기:
+            <input type="button" value="white" />
+            input: 사용자의 입력을 받는 태그
+            type: 어떤 형식으로 입력을 받을지
+            value: type의 값
+
+        경고:
+            <script>
+                alert("hello world");
+            </script>
+
+        이벤트:
+            JavaScript 코드가 script 태그 안 쪽에 존재할 수 있지만,
+            HTML 태그 안에서도 존재할 수 있다.
+            <input type="button" value="white" onclick="alert('Hello world')" />
+            onclick: 사용자가 클릭하면 다음의 JavaScript 코드 실행
+
+            사용자의 행동으로 인해 어떠한 사건(이벤트)가 발생했을 때,
+            어떠한 코드가 실행되야 함을 브라우저에게 명령해놓는 것
+
+            <input type="text" onfocus="alert('focus')" onblur="alert('blur')"/>
+            onfocus: 해당 창을 선택할 때,
+            onblur: 해당 창이 선택되어 있는 상태에서 다른 곳을 누를 때,
+    
+    [실습 2]
+        <input type="text" id="user_input"/>
+        <input type="button" value="white" onclick="alert(document.getElementById('user_input').value)"/>
+        첫 input: 글씨 받기, id 입력
+        두 번째 input: 버튼
+        document.getElementById(id).value: 입력받은 id에 해당하는 value 리턴
+        
+    [실습 3]
+        class:
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8" />
+            <style>
+                li {
+                    color: blue;
+                }
+                ul li {
+                    font-size: 40px;
+                }
+                .em {
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+            <ol>
+                <li class="em">html</li>
+                <li>css</li>
+                <li>javascript</li>
+            </ol>
+            <ul>
+                <li>이상민</li>
+                <li class="em">이상혁</li>
+                <li>이현지</li>
+                <li>이지은</li>
+            </ul>
+        </body>
+        </html>
+
+        선택자는 '.클래스이름'으로 사용
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8" />
+            <style>
+                .em {
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+            <ol id="target">
+                <li>html</li>
+                <li>css</li>
+                <li>javascript</li>
+            </ol>
+            <ul>
+                <li>이상민</li>
+                <li>이상혁</li>
+                <li>이현지</li>
+                <li>이지은</li>
+            </ul>
+            <input type="button" value="강조" onclick="document.getElementById('target').className='em'"/>
+        </body>
+        </html>
+
+        버튼을 추가하고, 사용자가 버튼을 누르면,
+        document.getElementById('target).className으로 ol 태그를 불러온 뒤,
+        ='em'으로 em 클래스 부여하여,
+        ol 태그들에게 밑줄 긋기
+
+        CSS: HTML 디자인
+        JavaScript: HTML 제어
+    
+    [실습 4]
+    버튼 만들고, 기능 달아주기
+        page_vc.html:
+        <body id="target">
+            <header>
+                <h1><a href="http://localhost/">JavaScript</a></h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost/page_html.html">Javascript란?</a></li>
+                    <li><a href="http://localhost/page_vc.html">변수와 상수</a></li>
+                    <li><a href="http://localhost/page_op.html">연산자</a></li>
+                </ul>
+            </nav>
+            <div id="control">
+                <input type="button" value="white"/ onclick="document.getElementById('target').className='white'">
+                <input type="button" value="black"/ onclick="document.getElementById('target').className='black'">
+            </div>
+            <article>
+                <h2>변수와 상수</h2>
+                변수는 바뀔 수 있는 값이고, 상수는 바뀌지 않는 값입니다.
+            </article>
+        </body>
+
+        style.css:
+        body.white {
+            background-color: white;
+            color: black;
+        }
+        body.black {
+            background-color: black;
+            color: white;
+        }
+        #control {
+            float: right;
+        }
+    
+    [실습 5]
+        실습 4에서 했던 버튼 만들기 및 동작하기를,
+        js파일을 만들고 그 파일에 동작을 저장한 뒤 불러오는 방식으로 만들기
+        를 하는건데 따라하지 말랬음
+
+    [지금까지 배운 것만으로도 할 수 있는 일]
+    - Disqus(유료됐음), LiveRe (댓글 기능)
+    - tawk.to (채팅 기능)
