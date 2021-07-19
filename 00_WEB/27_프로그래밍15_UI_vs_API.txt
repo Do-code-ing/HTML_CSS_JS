@@ -1,0 +1,8 @@
+https://opentutorials.org/course/1688/9379
+
+27. 프로그래밍 15: UI vs API
+    UI: User Interface
+    API: Application Programming Interface
+
+    UI: 사용자가 보는 화면 따위 (글씨, 그림, 버튼)
+    API: 제작자가 보는 화면 따위 (코드)
