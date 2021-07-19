@@ -1,0 +1,49 @@
+https://opentutorials.org/course/1688/9377
+
+26. 프로그래밍 13: 함수의 기본 문법
+    JavaScript:
+    function function_name() {
+
+    }
+    
+    function_name();
+
+    PHP:
+    function function_name() {
+
+    }
+    
+    function_name();
+
+    <h1>JavaScript</h1>
+    <script>
+        function a(){
+            document.write("Hello JS Function");
+        }
+        a();
+    </script>
+
+    <h1>php</h1>
+    <?php
+        function a(){
+            echo "Hello PHP Function";
+        }
+        a();
+    ?>
+
+26. 프로그래밍 14: 함수의 입력과 출력
+    <h1>JavaScript</h1>
+    <script>
+        function a(input){
+            return input + 1;
+        }
+        document.write(a(6));
+    </script>
+
+    <h1>php</h1>
+    <?php
+        function a($input){
+            return $input + 1;
+        }
+        echo a(6);
+    ?>
