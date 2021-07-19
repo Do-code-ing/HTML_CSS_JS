@@ -1,0 +1,70 @@
+https://opentutorials.org/course/1688/9375
+
+25. 프로그래밍 11: 배열
+    JavaScript:
+    list = new Array("one", "two", 'three);
+    list[0];
+
+    PHP:
+    $list = array("one', "two", "three");
+    $list[0];
+
+    <h1>JavaScript</h1>
+    <script>
+        list = new Array("one", "two", "three");
+        document.write(list[0]);
+        document.write(list.length);
+    </script>
+
+    <h1>php</h1>
+    <?php
+        $list = array("one", "two", "three");
+        echo $list[0];
+        echo count($list);
+    ?>
+
+    Python: len()
+    JavaScript: .length
+    php: count()
+
+
+25. 프로그래맹 12: 배열 + 반복문
+    JavaScript:
+    list = new Array("one", "two", "three");
+    i = 0;
+    while (i < list.length) {
+        document.write(list[i]);
+        i += 1
+    }
+
+    PHP:
+    $list = array("one", "two", "three");
+    $i = 0;
+    while ($i < count($list)) {
+        echo $list[$i]
+        $i = $i + 1
+    }
+
+    <h1>JavaScript</h1>
+    <ul>
+    <script>
+        list = new Array("one", "two", "three");
+        i = 0;
+        while (i < list.length) {
+            document.write("<li>" + list[i] + "</li>");
+            i += 1;
+        }
+    </script>
+    </ul>
+
+    <h1>php</h1>
+    <ul>
+    <?php
+        $list = array("one", "two", "three");
+        $i = 0;
+        while ($i < count($list)) {
+            echo "<li>".$list[$i]."</li>";
+            $i = $i + 1;
+        }
+    ?>
+    </ul>
