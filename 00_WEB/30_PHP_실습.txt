@@ -1,0 +1,48 @@
+https://opentutorials.org/course/1688/9r83
+
+30. PHP 실습
+    [실습 1]
+                  http://a.com/a.php                             읽기
+        웹 브라우저 ------ 요청 ------> 웹 서버 ------ 요청 ------> PHP
+        웹 브라우저 <------ 응답 ------ 웹 서버 <------ 응답 ------ PHP
+
+        html 파일 여러개로 웹 페이지를 만들 때,
+        중복이 생기게 되고, 수정을 위해서는 각 파일마다 수정해야하는 번거로움이 있다.
+        이것을, 한 php파일을 만들어 php에서 동작하게 하면 해결할 수 있다.
+
+        정보(data)를 뼈대(html)로부터 따로 빼서 저장한다. (데이터베이스에)
+    
+    [실습 2]
+        $_GET['id'];
+        - id(입력값) 가져오기
+
+        file_get_contents("1.txt");
+        - 파일 가져오기
+
+        file_get_contents($_GET["id"].".txt");
+        - id(입력값)를 통해 파일 가져오기
+    
+    [실습 3]
+        list.txt:
+            <li><a href="http://localhost/page_html.html">Javascript란?</a></li>
+            <li><a href="http://localhost/page_vc.html">변수와 상수</a></li>
+            <li><a href="http://localhost/page_op.html">연산자</a></li>
+
+        index.php:
+        	<?php
+				echo file_get_contents("list.txt")
+			?>
+    
+    [실습 4]
+        1.txt, 2.txt 3.txt만들고, 안에 html 언어로 내용 쓰고
+        list.txt: 내용(링크) 수정
+            <li><a href="http://localhost/index.php?id=1">Javascript란?</a></li>
+            <li><a href="http://localhost/index.php?id=2">변수와 상수</a></li>
+            <li><a href="http://localhost/index.php?id=3">연산자</a></li>
+
+        index.php: 링크 연결
+            <?php
+                if (empty($_GET['id']) == false) {
+                    echo file_get_contents($_GET['id'].".txt");
+                }
+            ?>
