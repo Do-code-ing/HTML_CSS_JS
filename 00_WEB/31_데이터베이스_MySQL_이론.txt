@@ -43,7 +43,7 @@ https://opentutorials.org/course/1688/9386
 
         mysql: mysql monitor를 실행시키겠다
         -hlocalhost: -h 뒤에 오는 것이 mysql의 주소임을 명시 (ex/ opentutorials.org)
-        -uroot: -u 뒤에 오는 것이 비밀번호임을 명시
+        -uroot: -u 뒤에 오는 것이 아이디
         -p: 비밀번호를 입력받아라
     
     [이론 3]

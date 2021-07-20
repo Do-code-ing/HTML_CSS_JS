@@ -1,0 +1,115 @@
+https://opentutorials.org/course/1688/9398
+
+32. MySQL 실습
+    [실습 1, 2]
+        mysqli: PHP에 내장돼있는 API
+        
+                    MySQL monitor                       mysqli
+        서버 접속   mysql -hlocalhost -uroot -p비밀번호; $conn = mysqli_connect('localhost', 'root', '비밀번호');
+        DB 선택     use opentutorials;                  mysqli_select_db($conn, 'opentutorials');
+        조회        SELETE * FROM topic;                $result = mysqli_query($conn, 'SELECT * FROM topic');
+        출력        id title author                     $row = mysqli_fetch_assoc($result);
+                    1 varia~ ~~~                        $row['title'];
+                    2 about~ ~~~                        $row['description'];
+        
+        mysqli_connect(주소, 아이디, 비밀번호);
+        - 서버 접속
+        mysqli_select_db(서버 객체, 데이터베이스 이름);
+        - DB 선택
+        mysqli_query(서버 객체, 명령어);
+        - 질의를 통한 명령어 사용
+        mysqli_fetch_assoc(명령어를 통해 가져온 데이터);
+        - 데이터 가져오기
+    
+        var_dump($row);
+        - 저장된 값 확인
+
+        while ($row = mysqli_fetch_assoc($result)){
+            echo $row['id'];
+            echo $row['title'];
+            echo "<br/>";
+        }
+        while 문을 사용하여 저장된 정보 모두 출력 가능
+
+        while ($row = mysqli_fetch_assoc($result)){
+            echo '<li><a href="http://localhost/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
+        }
+        '.변수.': Python의 f"{변수}"와 같은 기능
+    
+    [실습 3]
+        <?php
+            if (empty($_GET['id']) === false) {
+                $sql = "SELECT * FROM topic WHERE id=".$_GET['id'];
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($result);
+                echo '<h2>'.$row['title'].'</h2>';
+                echo $row['description'];
+            }
+        ?>
+        id가 있다면,
+        mysqli_query 함수로 정보를 불러오고,
+        mysqli_fetch_assoc 함수로 값을 저장한 뒤,
+        출력한다.
+    
+    [실습 4]
+        form: 사용자의 정보를 서버로 전송하는 수단
+
+        <input type="text">
+        - 텍스트 필드
+
+        <textarea></textarea>
+        - textarea
+
+        <p></p>
+        - paragraph: 단락, 절
+
+        <input type="submit">
+        - 제출(전달) 버튼
+
+        <form action=""></form>
+        - form 태그로 감싸면 제출버튼을 누를 시, 서버로 전송되는데 액션에 위치를 적어야함
+
+        <form action="http://localhost/php/3.php" method="GET">
+        - GET: 변경하지 않고 무언가를 보는 데 사용됨 (ex/ 검색 페이지)
+        <form action="http://localhost/php/3.php" method="POST">
+        - POST: 무언가를 변경하는 데 사용됨 (ex/ 비밀번호 변경 양식)
+        글을 쓰거나, 전송하는 경우 POST를 써야함
+
+        <form action="http://localhost/php/3.php" method="POST">
+            <p>제목: <input type="text" name="title"></p>
+            <p>본문: <textarea name="description"></textarea></p>
+            <input type="submit">
+        </form>
+    
+    [실습 5]
+        전송받은 데이터를 가공해야함 (추가, 삭제 등)
+
+        write.php:
+            <article>
+                <form action="process.php" method="post">
+                    <p>
+                        제목: <input type="text" name="title">
+                    </p>
+                    <p>
+                        작성자: <input type="text" name="author">
+                    </p>
+                    <p>
+                        본문: <textarea name="description"></textarea>
+                    </p>
+                    <input type="submit">
+                </form>
+            </article>
+        
+        process.php:
+            <?php
+                $conn = mysqli_connect("localhost", "root", 111111);
+                mysqli_select_db($conn, "opentutorials");
+                $sql = "INSERT INTO topic(title, description, author, created) VALUES('".$_POST['title']."', '".$_POST['description']."', '".$_POST['author']."', now())";
+                $result = mysqli_query($conn, $sql);
+                header('Location: http://localhost/index.php')
+            ?>
+        
+        $sql: 명령어를 담고 있는 변수
+        now(): 현재 시각, datetime을 리턴하는 함수
+        $result: 명령 처리
+        header(): redirection, 주소 이동, 이동될 페이지, 새로 고침같은 의미
