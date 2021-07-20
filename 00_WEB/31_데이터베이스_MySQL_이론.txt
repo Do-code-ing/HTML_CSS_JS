@@ -1,0 +1,126 @@
+https://opentutorials.org/course/1688/9386
+
+31. 데이터베이스(MySQL) 이론
+    [이론 1]
+        데이터베이스: 정보를 관리하는 전문 애플리케이션
+
+        File vs DATABASE
+        File: 기본적인 데이터 관리 수단
+        DATABASE:
+            안전하다
+            금고
+            빠르다(index)
+            프로그래밍적 제어 가능
+        
+        관계형 데이터베이스:
+        - MySQL
+        - MSSQL
+        - Oracle
+
+        MySQL:
+            웹과 함께 성장한 데이터베이스 (open source이기 때문)
+            MySQL == MariaDB (이곳저곳 팔려서 사람들이 다시 만듬)
+        
+        SQL: Structured Query Language
+            컴퓨터에게 구조화된 정보를 질의하는 프로그래밍 언어.
+            각각의 다른 회사가 만든 데이터베이스들도 표준화된 프로그래밍 언어를 구현하고 있기 때문에
+            동일한 SQL을 통해서 그 시스템들을 제어할 수 있게 된다.
+
+                      SELECT*FROM topic;
+        MySQL-Client ------ 요청 ------> MySQL-Server
+        MySQL-Client <----- 응답 ------- MySQL-Server
+                          table(표)
+        
+        웹 브라우저 --> 웹 서버 --> PHP --> MySQL
+                                 Client   Server
+    
+    [이론 2]
+        MySQL monitor: Client로 MySQL 서버를 제어하기 위한 도구
+        1. cmd 열기
+        2. cd C:\Bitnami\wampstack-8.0.8-0\mariadb\bin 입력 (cd: change directory)
+        3. mysql -hlocalhost -uroot -p 입력
+        4. 비밀번호 입력
+
+        mysql: mysql monitor를 실행시키겠다
+        -hlocalhost: -h 뒤에 오는 것이 mysql의 주소임을 명시 (ex/ opentutorials.org)
+        -uroot: -u 뒤에 오는 것이 비밀번호임을 명시
+        -p: 비밀번호를 입력받아라
+    
+    [이론 3]
+        하나의 서버(MySQL)안에,
+        여러 개의 DATABASE가 있을 수 있고,
+        하나의 DATABASE안에,
+        여러 개의 Table(file)이 있을 수 있다.
+
+        하나의 사이트, 웹 애플리케이션, 프로그램이,
+        각 하나의 데이터베이스를 갖는다고 생각하면 된다.
+
+        show databases;
+        - 데이터베이스 목록 보기
+
+        처음 나온 데이터베이스는 MySQL이 필요해서 존재하는(만들어진) 데이터베이스다.
+        건드리면 안된다.
+        새 거를 만들어 쓰자.
+
+        CREATE DATABASE opentutorials CHARACTER SET utf8 COLLATE utf8_general_ci;
+        - CREATE DATABASE opentutorials:
+            opentutorials라는 이름의 데이터베이스를 만든다.
+        - CHARACTER SET utf8:
+            언어를 utf8로 정한다.
+        - COLLATE utf8_general_ci:
+            수집한다. 제네랄 규격을
+         
+        use opentutorials;
+        - opentutorials라는 데이터베이스를 사용하겠다.
+
+        CREATE TABLE `topic` ( # enter
+        `id` int(11) NOT NULL AUTO_INCREMENT, # enter
+        `title` varchar(100) NOT NULL, # enter
+        `description` text NOT NULL, # enter
+        `author` varchar(30) NOT NULL, # enter
+        `created` datetime NOT NULL, # enter
+        PRIMARY KEY(id) # enter
+        ) ENGINE=InnoDB DEFAULF CHARSET=utf8;
+        - topic: 테이블의 이름
+        - id: 열의 이름
+        - int: id의 값들이 integer이어야 한다.
+        - NOT NULL: 반드시 정보가 존재해야 한다.
+        - AUTO_INCREMENT: 자동으로 숫자를 증가시킨다.
+        - varchar(100): 100글자 이내의 정보만 저장할 수 있다. 넘어가면 짤린다.
+        - text: 긴 텍스트를 받을 수 있어야 한다.
+        - datetime: 시간과 날짜를 의미하는 데이터타입
+        - ㄴPRIMARY KEY(id): 성능을 위해서 사용하는 옵션 (뭔지는 나중에)
+
+        show tables;
+        - 테이블 확인
+
+        INSERT INTO `topic` (title, description, author, created) # 아랫줄과 연결해서 타이핑
+        VALUES('about javascript', 'javascript is ~', 'egoing', '2021-7-20 12:12:5');
+        - INSERT: 삽입하겠다.
+        - INTO: 어디에다가
+        - (title, ... , created): 삽입할 데이터의 위치
+        - VALUES(...): 위 위치에 대응하는 각 데이터 입력
+
+        SELECT * FROM topic;
+        - SELECT: 가져오겠다.
+        - *: Python에서 *list와 같은 의미인듯
+        - FROM: 어디에서
+
+        SELECT title, author FROM topic;
+        - topic에서 title과 author정보만 가져오겠다.
+
+        INSERT INTO `topic` (title, description, author, created) # 아랫줄과 연결해서 타이핑
+        VALUES('variable and constant', 'variable is ~', 'docoding', '2021-7-20 12:21:5');
+        - 새 데이터 삽입
+
+        SELECT * FROM topic;
+        - 데이터 확인
+
+        잘 보면 id를 입력하지 않았는데 1, 2로 지정이된 것을 알 수 있는데,
+        아까 table을 만들 때, AUTO_INCREMENT로 인해서 데이터가 추가될 때 마다 id의 값이 1씩 증가한 것이다.
+
+        select id, title, author, created from topic where id=3;
+        - where id=3: id가 3인 행을
+
+        select id, title, author, created from topic order by id desc;
+        - order by id desc: 정렬한다. id를 거꾸로 (== descending order(내림차순))
