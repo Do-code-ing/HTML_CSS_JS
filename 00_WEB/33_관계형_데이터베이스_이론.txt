@@ -1,0 +1,12 @@
+https://opentutorials.org/course/1688/9427
+
+33. 관계형 데이터베이스 이론
+    데이터베이스:
+        관계형 데이터베이스, 객체형 데이터베이스, ...
+    
+    MySQL: 관계형 데이터베이스
+    MSSQL: ``
+    ORACLE: ``
+
+    관계형 데이터베이스가 주류다.
+    Relational database
