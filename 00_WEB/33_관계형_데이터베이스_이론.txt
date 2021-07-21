@@ -10,3 +10,6 @@ https://opentutorials.org/course/1688/9427
 
     관계형 데이터베이스가 주류다.
     Relational database
+
+    중복이 발생하는데, 별도의 테이블을 만들어서 그 두 개의 관계를
+    join을 통해 합칠 수 있다.

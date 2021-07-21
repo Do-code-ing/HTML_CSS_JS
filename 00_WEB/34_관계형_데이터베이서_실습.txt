@@ -1,0 +1,42 @@
+https://opentutorials.org/course/1688/9428
+
+34. 관계형 데이터베이스 실습
+    [실습 1, 2]
+        mysql monitor에 데이터 추가하고,
+        $sql = "SELECT topic.id, title, author, name, description From topic LEFT JOIN user on topic.author=user.id WHERE topic.id=".$_GET['id'];
+
+    [실습 3]
+        데이터 추가:
+            1. author에 숫자가 들어가므로 user 테이블에서 입력값이 name인 행의 id를 찾아서 입력해야함
+            2. 만약 user 테이블에 입력값이 없다면, 새로 추가해서 만들고 1번의 과정을 진행
+        
+        process.php:
+        <?php
+            $conn = mysqli_connect("localhost", "root", 111111);
+            mysqli_select_db($conn, "opentutorials");
+            $sql = "SELECT * FROM user WHERE name='".$_POST['author']."'";
+            $result = mysqli_query($conn, $sql);
+            if ($reuslt->num_rows == 0) {
+                $sql = "INSERT INTO user (name, password) VALUES('".$_POST['author']."','111111')";
+                mysqli_query($conn, $sql);
+                $user_id = mysqli_insert_id($conn);
+            } else {
+                $row = mysqli_fetch_assoc($result);
+                $user_id = $row['id'];
+            }
+            $sql = "INSERT INTO topic(title, description, author, created) VALUES('".$_POST['title']."', '".$_POST['description']."', '".$user_id."', now())";
+            $result = mysqli_query($conn, $sql);
+            header('Location: http://localhost/index.php')
+        ?>
+
+        첫 $sql
+            - 사용자의 입력으로 받은 author값으로 서버에서 조회하겠다.
+        if ($reuslt->num_rows == 0)
+            - 조회한 정보에서 num_rows가 없다면,
+        $sql = "INSERT INTO user (name, password) VALUES('".$_POST['author']."','111111')";
+            - user 테이블에 삽입
+        $user_id = mysqli_insert_id($conn);
+            - 마지막 쿼리에 사용된(AUTO_INCREMENT된) id를 반환한다.
+            - 즉, 현재 if 문을 진행하면서 만들어진 정보의 id를 반환한다.
+        else 문
+            - 연관 배열로 정보를 받아오고 처리한다.
