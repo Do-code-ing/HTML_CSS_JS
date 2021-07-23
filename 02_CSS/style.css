@@ -1,0 +1,53 @@
+body {
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+.nav {
+    height: 70px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right-item {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.company-name {
+    margin-left: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.main {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.prices {
+    display: flex;
+}
+
+.price-item {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 4px;
+}
