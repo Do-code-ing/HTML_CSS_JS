@@ -1,0 +1,8 @@
+https://opentutorials.org/course/2039/10930
+
+01. 기술 소개
+    HTML: HyperText Markup Language
+
+    HyperText: 하이퍼 텍스트를 가장 중요한 특징으로 하는
+    Markup: 마크업이라는 형식을 가진
+    Language: 컴퓨터 프로그래밍 언어
