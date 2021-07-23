@@ -1,6 +1,0 @@
-https://opentutorials.org/course/2039
-
-00. HTML
-    선행 수업 듣기
-    웹 애플리케이션 만들기:
-    https://opentutorials.org/course/1688/10245
