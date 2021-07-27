@@ -18,7 +18,9 @@ const sayHello = function(name) {
 
 sayHello('Mike');
 
-// 화살표 함수 (많이 쓰이는 중, 익숙해질 것)
+// 화살표 함수
+// (많이 쓰이는 중, 익숙해질 것)
+// Python의 lambda와 비슷한듯
 const sayHello2 = (name) => {
     const msg = `Hello ${name}`;
     console.log(msg);
